@@ -18,25 +18,30 @@ public class NumbersActivity extends AppCompatActivity {
 
 
 
-        numeros.add(new NumerosTraduccion("guan","one"));
-        numeros.add(new NumerosTraduccion("chu","two"));
-        numeros.add(new NumerosTraduccion("zrii","three"));
-        numeros.add(new NumerosTraduccion("for","four"));
-        numeros.add(new NumerosTraduccion("faif","five"));
-        numeros.add(new NumerosTraduccion("seih","six"));
-        numeros.add(new NumerosTraduccion("se-ben","seven"));
-        numeros.add(new NumerosTraduccion("eigg","eight"));
-        numeros.add(new NumerosTraduccion("nain","nine"));
-        numeros.add(new NumerosTraduccion("dieh","ten"));
+        numeros.add(new NumerosTraduccion("guan","one",R.drawable.numero1));
+        numeros.add(new NumerosTraduccion("chu","two",R.drawable.numero2));
+        numeros.add(new NumerosTraduccion("zrii","three",R.drawable.numero3));
+        numeros.add(new NumerosTraduccion("for","four",R.drawable.numero4));
+        numeros.add(new NumerosTraduccion("faif","five",R.drawable.numero5));
+        numeros.add(new NumerosTraduccion("seih","six",R.drawable.numero6));
+        numeros.add(new NumerosTraduccion("se-ben","seven",R.drawable.numero7));
+        numeros.add(new NumerosTraduccion("eigg","eight",R.drawable.numero8));
+        numeros.add(new NumerosTraduccion("nain","nine",R.drawable.numero9));
+        numeros.add(new NumerosTraduccion("dieh","ten",R.drawable.numero10));
 
 
 
 
-         NumerosAdapter adaptador = new NumerosAdapter(this,R.layout.layout_lista_numeros,numeros);
+
+         //NumerosAdapter adaptador = new NumerosAdapter(this,R.layout.layout_lista_numeros,numeros);
 
             ListView lista = (ListView) findViewById(R.id.list);
 
-            lista.setAdapter(adaptador);
+            AdapterNumerosTuneao adapter = new AdapterNumerosTuneao(this,numeros);
+
+            lista.setAdapter(adapter);
+
+           // lista.setAdapter(adaptador);
 
 
 
