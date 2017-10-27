@@ -1,5 +1,6 @@
 package com.example.android.miwok;
 
+import android.graphics.Color;
 import android.provider.UserDictionary;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,30 +19,33 @@ public class NumbersActivity extends AppCompatActivity {
 
 
 
-        numeros.add(new NumerosTraduccion("guan","one",R.drawable.numero1));
-        numeros.add(new NumerosTraduccion("chu","two",R.drawable.numero2));
-        numeros.add(new NumerosTraduccion("zrii","three",R.drawable.numero3));
-        numeros.add(new NumerosTraduccion("for","four",R.drawable.numero4));
-        numeros.add(new NumerosTraduccion("faif","five",R.drawable.numero5));
-        numeros.add(new NumerosTraduccion("seih","six",R.drawable.numero6));
-        numeros.add(new NumerosTraduccion("se-ben","seven",R.drawable.numero7));
-        numeros.add(new NumerosTraduccion("eigg","eight",R.drawable.numero8));
-        numeros.add(new NumerosTraduccion("nain","nine",R.drawable.numero9));
-        numeros.add(new NumerosTraduccion("dieh","ten",R.drawable.numero10));
+        numeros.add(new NumerosTraduccion("guan","one", Color.RED));
+        numeros.add(new NumerosTraduccion("chu","two",Color.RED));
+        numeros.add(new NumerosTraduccion("zrii","three",Color.RED));
+        numeros.add(new NumerosTraduccion("for","four",Color.RED));
+        numeros.add(new NumerosTraduccion("faif","five",Color.RED));
+        numeros.add(new NumerosTraduccion("seih","six",Color.RED));
+        numeros.add(new NumerosTraduccion("se-ben","seven",Color.RED));
+        numeros.add(new NumerosTraduccion("eigg","eight",Color.RED));
+        numeros.add(new NumerosTraduccion("nain","nine",Color.RED));
+
+        numeros.add(new NumerosTraduccion("dieh","ten",Color.RED));
 
 
 
 
 
-         //NumerosAdapter adaptador = new NumerosAdapter(this,R.layout.layout_lista_numeros,numeros);
+
+
+         NumerosAdapter adaptador = new NumerosAdapter(this,R.layout.layout_lista_numeros,numeros);
 
             ListView lista = (ListView) findViewById(R.id.list);
 
-            AdapterNumerosTuneao adapter = new AdapterNumerosTuneao(this,numeros);
+            //AdapterNumerosTuneao adapter = new AdapterNumerosTuneao(this,numeros);
 
-            lista.setAdapter(adapter);
+            //lista.setAdapter(adapter);
 
-           // lista.setAdapter(adaptador);
+         lista.setAdapter(adaptador);
 
 
 

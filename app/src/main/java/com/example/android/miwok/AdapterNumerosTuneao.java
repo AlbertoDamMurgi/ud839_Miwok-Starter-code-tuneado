@@ -1,8 +1,6 @@
 package com.example.android.miwok;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -12,10 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Farra on 26/10/2017.
@@ -55,7 +50,7 @@ public class AdapterNumerosTuneao extends ArrayAdapter<NumerosTraduccion> {
 
             //recogemos en el objeto los elementos de la vista
             holder.imagen = (ImageView) aux.findViewById(R.id.imagennum);
-            holder.miwok=(TextView) aux.findViewById(R.id.miwok);
+            holder.miwok=(TextView) aux.findViewById(R.id.miwokcolor);
             holder.ingles=(TextView) aux.findViewById(R.id.ingles);
 
             //el metodo holder nos permite guardar cualquier objeto para rescatarlo despues.
