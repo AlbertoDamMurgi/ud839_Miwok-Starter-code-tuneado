@@ -22,7 +22,11 @@ public class ColorsActivity extends AppCompatActivity {
         colores.add(new ColoresTraduccion("red","rojillo", R.drawable.color_red));
         colores.add(new ColoresTraduccion("gray","griss",R.drawable.color_gray));
         colores.add(new ColoresTraduccion("green","verdecillo",R.drawable.color_green));
+        colores.add(new ColoresTraduccion("black","negrin",R.drawable.color_black));
+        colores.add(new ColoresTraduccion("dusty yellow","amariyo paster",R.drawable.color_dusty_yellow));
 
+        colores.add(new ColoresTraduccion("brown","marroncin",R.drawable.color_brown));
+        colores.add(new ColoresTraduccion("mustard yellow","amarillon",R.drawable.color_mustard_yellow));
 
         AdapterColores adapter = new AdapterColores(this,colores);
 
