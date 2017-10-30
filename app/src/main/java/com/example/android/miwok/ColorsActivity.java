@@ -19,9 +19,9 @@ public class ColorsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_colors);
 
 
-        colores.add(new ColoresTraduccion("red","rojillo", Color.RED));
-        colores.add(new ColoresTraduccion("blue","azulin",Color.BLUE));
-        colores.add(new ColoresTraduccion("green","verdecillo",Color.GREEN));
+        colores.add(new ColoresTraduccion("red","rojillo", R.drawable.color_red));
+        colores.add(new ColoresTraduccion("gray","griss",R.drawable.color_gray));
+        colores.add(new ColoresTraduccion("green","verdecillo",R.drawable.color_green));
 
 
         AdapterColores adapter = new AdapterColores(this,colores);

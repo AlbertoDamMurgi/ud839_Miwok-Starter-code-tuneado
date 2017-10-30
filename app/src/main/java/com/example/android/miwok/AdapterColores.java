@@ -54,12 +54,15 @@ public class AdapterColores extends ArrayAdapter<ColoresTraduccion>{
 
         holder = (Coloresholder) aux.getTag();
 
-        holder.imagencolor.setBackgroundColor(datos.get(position).getImagen());
-        holder.inglescolor.setTextColor(datos.get(position).getImagen());
+
+        holder.imagencolor.setImageResource(datos.get(position).getImagen());
+
+        //holder.imagencolor.setBackgroundColor(datos.get(position).getImagen());
+        //holder.inglescolor.setTextColor(datos.get(position).getImagen());
         holder.inglescolor.setText(datos.get(position).getIngles());
 
 
-        holder.miwokcolor.setTextColor(datos.get(position).getImagen());
+        //holder.miwokcolor.setTextColor(datos.get(position).getImagen());
         holder.miwokcolor.setText(datos.get(position).getMiwok());
 
 
