@@ -17,6 +17,7 @@ package com.example.android.miwok;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -26,7 +27,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    private MediaPlayer media;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         numeros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                media = media.create(MainActivity.this,R.raw.number_nine);
                 Intent iranumeros = new Intent(MainActivity.this,NumbersActivity.class);
                 startActivity(iranumeros);
             }
@@ -62,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
                 Intent iracolores = new Intent(MainActivity.this,ColorsActivity.class);
                 startActivity(iracolores);
             }

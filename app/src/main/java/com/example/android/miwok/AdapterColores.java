@@ -1,6 +1,7 @@
 package com.example.android.miwok;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -58,13 +59,16 @@ public class AdapterColores extends ArrayAdapter<ColoresTraduccion>{
         holder.imagencolor.setImageResource(datos.get(position).getImagen());
 
         //holder.imagencolor.setBackgroundColor(datos.get(position).getImagen());
-        //holder.inglescolor.setTextColor(datos.get(position).getImagen());
+       // holder.inglescolor.setTextColor(Color.WHITE);
+
         holder.inglescolor.setText(datos.get(position).getIngles());
 
 
         //holder.miwokcolor.setTextColor(datos.get(position).getImagen());
-        holder.miwokcolor.setText(datos.get(position).getMiwok());
 
+
+        holder.miwokcolor.setText(datos.get(position).getMiwok());
+       // holder.miwokcolor.setTextColor(Color.WHITE);
 
         return aux;
 

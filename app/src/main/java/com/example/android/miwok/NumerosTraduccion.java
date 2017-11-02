@@ -11,11 +11,13 @@ public class NumerosTraduccion {
     private String miwok;
     private String ingles;
     private int imagenID;
+    private int sonido;
 
-    public NumerosTraduccion(String miwok, String ingles, int imagenID) {
+    public NumerosTraduccion(String miwok, String ingles, int imagenID, int sonido) {
         this.miwok = miwok;
         this.ingles = ingles;
         this.imagenID = imagenID;
+        this.sonido = sonido;
     }
 
     public String getMiwok() {
@@ -42,5 +44,12 @@ public class NumerosTraduccion {
         this.imagenID = imagenID;
     }
 
+    public int getSonido() {
+        return sonido;
+    }
+
+    public void setSonido(int sonido) {
+        this.sonido = sonido;
+    }
 
 }
