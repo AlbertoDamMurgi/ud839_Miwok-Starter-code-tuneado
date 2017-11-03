@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class Coloresholder {
 
-    public ImageView imagencolor;
+    public ImageView imagencolor,imagensonido;
     public TextView miwokcolor,inglescolor;
 
 }

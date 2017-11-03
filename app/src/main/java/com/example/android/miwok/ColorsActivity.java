@@ -46,27 +46,7 @@ public class ColorsActivity extends AppCompatActivity {
 
         lista.setAdapter(adapter);
 
-        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-
-
-
-                if (media.isPlaying()) {
-
-                    media.stop();
-
-                }
-
-                media = media.create(ColorsActivity.this, colores.get(position).getSonido());
-
-                media.start();
-
-
-            }
-        });
 
 
     }
