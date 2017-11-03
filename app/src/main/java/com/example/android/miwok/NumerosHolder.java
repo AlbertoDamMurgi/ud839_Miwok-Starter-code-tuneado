@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class NumerosHolder {
     //esta es una clase contenedora que va a tener los elementos.
-    public ImageView imagen;
+    public ImageView imagen,sonido;
     public TextView ingles,miwok;
 
 

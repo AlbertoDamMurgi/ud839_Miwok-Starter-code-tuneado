@@ -1,6 +1,7 @@
 package com.example.android.miwok;
 
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -21,6 +22,7 @@ public class AdapterNumerosTuneao extends ArrayAdapter<NumerosTraduccion> {
     private Context inflador;
     //los datos que va a manejar el adapter
     private ArrayList<NumerosTraduccion> datos;
+    private MediaPlayer media;
 
 
     public AdapterNumerosTuneao(@NonNull Context inflador, @NonNull ArrayList<NumerosTraduccion> datos) {
@@ -36,7 +38,7 @@ public class AdapterNumerosTuneao extends ArrayAdapter<NumerosTraduccion> {
 
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         //creamos a vista por la que entra por parametro
         View aux = convertView;
         //creamos el objeto de la clase que va a contener los elementos
@@ -52,6 +54,7 @@ public class AdapterNumerosTuneao extends ArrayAdapter<NumerosTraduccion> {
             holder.imagen = (ImageView) aux.findViewById(R.id.imagennum);
             holder.miwok=(TextView) aux.findViewById(R.id.miwokcolor);
             holder.ingles=(TextView) aux.findViewById(R.id.ingles);
+            holder.sonido=(ImageView) aux.findViewById(R.id.imagenplay);
 
             //el metodo holder nos permite guardar cualquier objeto para rescatarlo despues.
             aux.setTag(holder);
@@ -65,12 +68,42 @@ public class AdapterNumerosTuneao extends ArrayAdapter<NumerosTraduccion> {
         holder.ingles.setText(datos.get(position).getIngles());
         holder.miwok.setText(datos.get(position).getMiwok());
 
+
+
+
+
+        holder.sonido.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+
+                media = media.create(getContext(), datos.get(position).getSonido());
+
+
+                if (media.isPlaying()) {
+
+                    media.stop();
+
+                }
+
+
+
+                media.start();
+
+
+            }
+        });
+
         //
         //
         //todo esto lo hacemos para que si la vista ya esta inicializada, no volver a hacerlo
         //y que nuestro programa sea mucho mas eficiente
 
         //retornamos la vista
+
+
+
         return aux;
 
     }
