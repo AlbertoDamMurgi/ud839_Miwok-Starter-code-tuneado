@@ -78,7 +78,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/cafe" />
+        app:srcCompat="@android:drawable/ic_media_play" />
 
 
 </android.support.constraint.ConstraintLayout>

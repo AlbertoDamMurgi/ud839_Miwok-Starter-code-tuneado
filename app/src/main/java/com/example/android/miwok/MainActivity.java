@@ -97,47 +97,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /*
-    public void iraNumeros(View view) {
-
-        Intent iranumeros = new Intent(this,NumbersActivity.class);
-        startActivity(iranumeros);
-
-    }*/
 
 
-
-
-
-
-    public void iraFamily(View view) {
-
-        Intent irafamlily = new Intent(this,FamilyActivity.class);
-
-        startActivity(irafamlily);
-
-       // Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com"));
-
-      //  startActivity(i);
-
-
-    }
-
-
-    public void iraColors(View view) {
-
-        Intent iracolor = new Intent(this,ColorsActivity.class);
-
-        startActivity(iracolor);
-
-    }
-
-
-    public void iraFrases(View view) {
-
-        Intent irafrase = new Intent(this,PhrasesActivity.class);
-
-        startActivity(irafrase);
-
-    }
 }

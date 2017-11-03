@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.zip.Inflater;
@@ -78,21 +79,29 @@ public class AdapterColores extends ArrayAdapter<ColoresTraduccion> {
 
         holder.imagensonido.setOnClickListener(new View.OnClickListener() {
 
+            boolean aux = true;
 
             @Override
             public void onClick(View v) {
 
 
-                media = media.create(getContext(), datos.get(position).getSonido());
 
 
-                media.start();
+                if(aux) {
+                    media = media.create(getContext(), datos.get(position).getSonido());
+                    media.start();
+                    aux = false;
+                }
 
                 media.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
-
+                     //Toast toast =  Toast.makeText(getContext(),"prueba prueba prueba",Toast.LENGTH_SHORT);
+                            //toast.show();
+                        media.stop();
+                        media.reset();
                         media.release();
+                        aux=true;
 
                     }
                 });

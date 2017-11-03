@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -49,5 +50,35 @@ public class ColorsActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i("PAUSA","estas en pausa");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i("STAR","estas en start");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i("STOP","te has parado");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.w("DESTRUIDO","se ha destruido");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("RESUME","esta resumido");
     }
 }
